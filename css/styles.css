@@ -1,0 +1,230 @@
+/* Applies to all */
+body {
+    font-family: "Poppins", "Verdana", "Open Sans", "Arial";
+    margin: 0;
+    margin-top: 60px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+
+/* Navbar */
+nav,
+#menu-checkbox {
+    display: none;
+}
+
+nav {
+    background: #203E5F;
+    position: inherit;
+    width: -webkit-fill-available;
+    margin-top: 70px;
+    height: -webkit-fill-available;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #FFB01F;
+}
+
+#menu-checkbox:checked ~ nav {
+    display: grid;
+    grid-template-rows: 35px 35px 35px 35px;
+    padding-top: 5px;
+}
+
+.hamburger-icon {
+margin-left: auto;
+font-size: 30px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+header img {
+    max-width: 100px;
+    margin-left: 20px;
+}
+
+.material-symbols-outlined {
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+header img,
+.material-symbols-outlined {
+    margin-top: 10px;
+}
+
+
+/* Section under navbar with opening hour */
+.openinghours {
+    background-color: #203E5F;
+    text-align: center;
+    color: #FFF;
+    font-size: 0.9rem;
+}
+
+.openinghours h2 {
+    text-transform: uppercase;
+}
+
+
+/* Styling tour bottom */
+.cta {
+    background-color: #FFF;
+    color: #000;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.cta:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
+.info a {
+    justify-self: center;
+}
+
+/* Styling black bottom */
+
+.cta-black {
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 0.5em;
+    border-style: solid;
+    margin: 10px 0px;
+    text-align: center;
+    background: #000;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.cta-black:hover,
+.cta-product:hover {
+    background-color: #383737;
+}
+
+
+/* Footer */
+footer {
+    background: #203E5F;
+}
+
+.footer-c {
+    display: grid;
+    grid-template-rows: 120px 180px 180px 180px;
+    margin: 20px;
+}
+
+.footer-heading {
+    display: grid;
+    grid-template-rows: 45px 30px 30px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FFF;
+}
+
+.events a:hover,
+footer a:hover {
+    color: #FFB01F;
+}
+
+footer h2 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: #FFF;
+}
+
+.footer-b {
+    font-size: 0.7rem;
+    text-align: center;
+    color: #FFF;
+}
+
+
+/* Media*/
+
+@media (min-width: 600px){
+
+.footer-c {
+    grid-template-rows: 200px;
+    grid-template-columns: 270px 200px;
+    justify-content: center;
+}
+
+}
+
+
+@media (min-width: 768px){
+
+.footer-c {
+    grid-template-columns: 200px 190px 190px 190px;
+    justify-content: space-evenly;
+}
+
+nav a {
+    margin: 15px;
+    font-size: 1.3rem;
+}
+
+#menu-checkbox:checked ~ nav {
+    grid-template-rows: 40px 40px 40px 40px;
+}
+    
+}
+
+
+@media (min-width: 1024px) {
+
+    header img {
+        max-width: 150px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 50px;
+    }
+
+    nav {
+        margin-top: 90px;
+    }
+
+}
+

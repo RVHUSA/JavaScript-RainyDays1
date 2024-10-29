@@ -1,0 +1,354 @@
+/* Header */
+.header1 h1,
+.header2 h2 {
+    margin: 40px;
+}
+
+.header1 img {
+    margin-top: 10px;
+}
+
+/* Blue part / explore */
+.explore h1 {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.explore {
+    background-color: #CCEAFA;
+    padding: 2px 25px;
+}
+
+
+/* Exhibitions and events */
+.exhibition-list h2,
+.upcoming-events h2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.exgrid {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    grid-gap: 16px;
+    margin: 0px 12px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.exhibition-list h1,
+.upcoming-events h1 {
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+.allevents {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Applies to all */
+.events img,
+.events1 img,
+.exhibition-list img,
+.header1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.explore h1,
+.header1 h1,
+.header2 h2,
+.exhibition-list h1,
+.upcoming-events h1 {
+    text-transform: uppercase;
+
+}
+
+.header1 h1,
+.header2 h2,
+.exhibition-list h1,
+.upcoming-events h1, 
+.upcoming-events h2 {
+    text-align: center;
+}
+
+/* Jacket list */
+
+select {
+    border: none;
+    outline: none;
+    margin: 50px 0px 0px 60px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Hind Madurai";
+}
+
+.filter-1 select,
+.filter-4 select {
+    width: 90px;
+}
+
+.filter-2 select,
+.filter-3 select {
+    width: 70px;
+}
+
+.jacket-list {
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-template-rows: 240px 240px 260px;
+    grid-gap: 0px;
+    margin: 20px 20px 20px 20px;
+    font-size: 0.7rem;
+    justify-content: space-evenly;
+}
+
+.jackets img,
+.product_image {
+    width: 90px;
+    height: auto;
+    grid-column: -1/1;
+    align-items: center;
+    background-color: #F4F3F3;
+    margin: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 8px;
+}
+
+.jackets p {
+    grid-column: 1;
+    font-size: 1.4em;
+    margin: 0px 10px;
+}
+
+.jackets h2 {
+    margin-bottom: 0px;
+    margin: 0px 10px;
+}
+
+.jacket-list a {
+text-decoration: none;
+color: #000;
+}
+
+.filter-1, .filter-2, .filter-3, .filter-4 {
+    display: none;
+}
+
+
+
+
+/* Media JAckets list */
+
+@media (min-width: 600px) {
+
+.content {
+    display: grid;
+    margin: 60px;
+    grid-gap: 1em;
+    grid-template-rows: auto;
+    max-width: 500px;
+}
+
+.filter-1, .filter-2, .filter-3, .filter-4 {
+    display: inline-block;
+}
+
+.filter-5 {
+    display: none;
+}
+
+.jackets img,
+.product_image {
+    width: 150px;
+}
+
+.jacket-list {
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 300px 300px 300px;
+    margin: 20px 20px 0px 20px;
+    justify-content: space-evenly;
+    font: 0.7rem;
+}
+
+
+}
+    
+@media (min-width: 800px) {
+
+
+.jacket-list {
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 450px 450px 450px;
+    grid-gap: 20px;
+    justify-content: start;
+    font-size: 1rem;
+    margin: 100px;
+}
+
+.jackets img,
+.product_image {
+    width: 300px;
+}
+
+
+.filter-5 {
+    display: none;
+}
+
+.filter-1, .filter-2, .filter-3, .filter-4 {
+    display: inline-block;
+}
+
+}
+
+
+
+/* Media*/
+
+@media (min-width: 425px) {
+
+    .exgrid {
+        grid-template-columns: 195px 195px;
+    }
+
+}
+
+@media (min-width: 550px) {
+
+    .exgrid {
+        grid-template-columns: 255px 255px;
+    }
+
+}
+
+@media (min-width: 680px) {
+
+    .exgrid {
+        grid-template-columns: 320px 320px;
+    }
+
+}
+
+
+
+@media (min-width: 768px) {
+
+    .exgrid {
+        grid-template-columns: 375px 375px;
+    }
+
+    .explore p,
+    .info p {
+        font-size: 1.1rem;
+    }
+
+    .explore h1 {
+        font-size: 1.4rem;
+    }
+
+    .info {
+        margin-top: 40px;
+        grid-template-rows: 40px 30px 30px 30px 30px 40px 130px;
+    }
+
+    .info h2 {
+        font-size: 1.2rem;
+    }
+
+    .info h1 {
+        font-size: 1.4rem;
+    }
+
+    .events {
+        margin: 10px;
+    }
+
+    .events1 {
+        margin: 20px;
+    }
+
+    .allevents {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 25px;
+    }
+
+    .allevents p {
+        margin: 0;
+    }
+
+    .upcoming-events h2 {
+        text-align: start;
+    }
+
+    .exhibition-list h1,
+    .upcoming-events h1 {
+    font-size: 1.8rem;
+}
+
+.header1 img {
+    width: 100%;
+    height: 700px;
+}
+
+.upcoming-events {
+    margin-bottom: 60px;
+}
+
+
+}
+
+@media (min-width: 900px) {
+
+    .hide1,
+    .upcoming-events p {
+        display: block;
+    }
+
+    .exgrid {
+        grid-template-columns: 440px 440px;
+        justify-content: space-evenly;
+    }
+
+    .exhibition-list h1 {
+        margin-bottom: 40px;
+    }
+
+    .header1 h1,
+    .header2 h2 {
+        font-size: 2.3rem;
+        margin: 60px 0px;
+    }
+
+    .exhibition h2,
+    .upcoming-events h2 {
+        font-size: 1.1rem;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .header1 img {
+        width: 100%;
+        height: 800px;
+    }
+    
+}
+
+@media (min-width: 1110px) {
+
+    .exgrid {
+        grid-template-columns: 580px 580px;
+    }
+    
+
+}
