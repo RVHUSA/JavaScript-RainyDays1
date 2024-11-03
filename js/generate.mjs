@@ -1,9 +1,10 @@
 export function generate(clothing) {
-  const link = document.createElement('a');
+  const link = document.createElement('a'); // Link
   link.href = "./jacket.html"; // Direct link to jacket.html
   link.target = '_blank'; // Opens the link in a new tab
 
   const container = document.createElement('div');
+  container.className = 'container'; // Styling
 
 // Create title
   const title = document.createElement('h3');  
