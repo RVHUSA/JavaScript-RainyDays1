@@ -1,6 +1,3 @@
-
-@param {string} url
-
 export async function theFetch(url) {
   try {
     const response = await fetch(url);
