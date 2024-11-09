@@ -180,7 +180,7 @@ footer h2 {
 }
 
 
-/* Styling Javascript */
+/* Styling Javascript Jackets List */
 
 #display-container {
     display: grid;
@@ -223,6 +223,8 @@ footer h2 {
     color: #007BFF; 
     font-weight: bold; 
 }
+
+
 
 
 /* Loader-styling */
@@ -288,6 +290,30 @@ nav a {
 }
     
 }
+
+
+/* Cart styling */
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+#cart-count {
+    position: absolute;
+    top: 43px;
+    background-color: orange;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+}
+
+.icons-shopping .material-symbols-outlined {
+    color: #333;     
+}
+
 
 
 @media (min-width: 1024px) {

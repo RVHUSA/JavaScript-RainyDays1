@@ -1,6 +1,14 @@
-const loader = {
-  show: () => document.getElementById('loader').style.display = 'block',
-  hide: () => document.getElementById('loader').style.display = 'none'
-};
-
-export default loader;
+export default {
+  show: function() {
+      const loaderElement = document.getElementById('loader');
+      if (loaderElement) {
+          loaderElement.style.display = 'block';
+      }
+  },
+  hide: function() {
+      const loaderElement = document.getElementById('loader');
+      if (loaderElement) {
+          loaderElement.style.display = 'none';
+      }
+  }
+}

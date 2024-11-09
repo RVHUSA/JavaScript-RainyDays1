@@ -15,27 +15,28 @@
     </head>
     <body>
       <div id="loader" class="loader"></div>
-    <header>
+      <header>
         <div class="logo">
             <a href="index.html"><img src="images/logo.png" alt="Rainy Days logo" class="logo"></a>
         </div>
         <label for="menu-checkbox" class="hamburger-icon" tabindex="0"><span class="material-symbols-outlined">menu</span></label>
         <input type="checkbox" id="menu-checkbox" tabindex="0">
-        <div>
-            <div class="icons-shopping"><span class="material-symbols-outlined">shopping_bag</span></div>
-        </div>
+            <a href="cartPage.html" class="cart-icon">
+                <span id="cart-count">0</span>
+                <div class="icons-shopping">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </div>
+            </a>
         <nav>
-            <a href="Men.html">Men</a>
-            <a href="Women.html">Women</a>
-            <a href="News.html">News</a>
+            <a href="produckts.html">Men</a>
+            <a href="produckts.html">Women</a>
+            <a href="produckts.html">News</a>
             <a href="About_us.html">About us</a>
             <a href="Contact.html">Contact</a>
         </nav>
     </header>
     <main>
       <div id="jacket-details"></div>
-      <button id="add-to-cart">Add to Cart</button>
-      <script src="js/jacketDetails.mjs"></script>
     </main>
     <footer>
         <div class="footer-c">
@@ -72,6 +73,8 @@
             </div>
         </div>
     </footer>
-    <script src="./js/script.mjs" type="module"></script>
+    <script src="js/jacketDetails.mjs" type="module"></script>
+    <script src="js/addToCart.mjs" type="module"></script>
+    <script src="js/cartNavigation.mjs" type="module"></script>
     </body>
 </html>
