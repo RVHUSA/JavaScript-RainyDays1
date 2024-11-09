@@ -20,11 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Order Confirmed!'); // Confirmed
         localStorage.removeItem('cart'); // Empty basket
         updateCartDisplay(); // Update after order
-        loader.hide(); // Hide loader
+        loader.hide(); 
 
-        // Add a small delay to ensure loader hides before navigation
-        setTimeout(() => {
-            window.location.href = 'checkout-success.html'; // Navigate to checkout success page
-        }, 500); // 500 milliseconds delay (just an example, adjust as needed)
+        // Navigates to checkout success page
+        window.location.href = 'checkout-success.html';
     });
 });
