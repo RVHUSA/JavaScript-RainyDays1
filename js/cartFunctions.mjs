@@ -1,8 +1,5 @@
-import loader from './loader.mjs'; 
-
-
 export function getCart() {
-  return JSON.parse(localStorage.getItem('cart')) || []; // Get basket from localStorage
+  return JSON.parse(localStorage.getItem('cart')) || []; // Get cart from localStorage
 }
 
 export function saveCart(cart) {
@@ -10,11 +7,10 @@ export function saveCart(cart) {
 }
 
 export function addToCart(product) {
-  loader.show(); 
 
   const cart = getCart();
   
-  // Check if already in basket
+  // Check if already in cart
   const existingProductIndex = cart.findIndex(item => item.id === product.id);
   
   if (existingProductIndex > -1) {
@@ -26,26 +22,18 @@ export function addToCart(product) {
     cart.push(product);
   }
   
-  saveCart(cart); // Save basket
+  saveCart(cart); // Save cart
   updateCartDisplay(); 
-
-  loader.hide(); 
 }
 
 export function removeFromCart(productId) {
-  loader.show(); 
-
   const cart = getCart();
   const updatedCart = cart.filter(item => item.id !== productId); // Remove product
   saveCart(updatedCart); // Save updated
   updateCartDisplay(); 
-
-  loader.hide(); 
 }
 
 export function updateCartDisplay() {
-  loader.show(); 
-  
   const cart = getCart();
   const cartContainer = document.getElementById('cart-items');
   const totalPriceElement = document.getElementById('total-price');
@@ -75,6 +63,4 @@ export function updateCartDisplay() {
 
   totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`; // Update total price
   cartCountElement.textContent = totalQuantity; // Update total quantity
-  
-  loader.hide(); 
 }

@@ -1,4 +1,3 @@
-// handleGenerate.mjs
 import { generate } from './generate.mjs'; // Import the function to generate HTML for each product
 
 export function handleGenerate(clothing) {

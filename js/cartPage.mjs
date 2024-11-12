@@ -3,18 +3,18 @@ import { updateCartDisplay } from './cartFunctions.mjs';
 document.addEventListener('DOMContentLoaded', () => {
   updateCartDisplay(); 
 
-// Empty cart by click
+  // Empty cart by click
   document.getElementById('clear-cart').addEventListener('click', () => {
     localStorage.removeItem('cart'); // Remove from localStorage
     updateCartDisplay(); // Update after remove
   });
 
-// Click on "confirm-order" to confirm
+  // Click on "confirm-order" to confirm
   document.getElementById('confirm-order').addEventListener('click', () => {
-    localStorage.removeItem('cart'); // Tøm handlekurven
-    updateCartDisplay(); // Oppdater visningen etter bestilling
+    localStorage.removeItem('cart'); // Empty cart
+    updateCartDisplay(); // Update cart after order
       
-// Naviger til success-siden
+  // Navigate to success-site
     window.location.href = 'checkout-success.html';
   });
 });

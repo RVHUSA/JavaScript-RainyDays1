@@ -1,15 +1,9 @@
-import loader from './loader.mjs';
-
 document.addEventListener('DOMContentLoaded', () => {
-  loader.show(); 
+  updateCartCount(); // Update cart icon
 
-  updateCartCount(); // Update basket icon
-
-  loader.hide(); 
-
-  // Click icon
+  // Click icon to show cart page
   document.getElementById('cart-icon').addEventListener('click', () => {
-      window.location.href = "cartPage.html"; // To cart page
+    window.location.href = "cartPage.html"; // To cart page
   });
 });
 

@@ -1,4 +1,3 @@
-
 export function generate(clothing) {
   const link = document.createElement('a'); // Link
   link.href = `jacket.html?id=${clothing.id}`; // Direct link to jacket.html
