@@ -19,3 +19,5 @@ function updateCartCount() {
   const cartCountElement = document.getElementById('cart-count');
   cartCountElement.textContent = cart.length; // Show count number on icon
 }
+
+

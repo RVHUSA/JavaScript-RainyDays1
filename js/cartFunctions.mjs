@@ -1,5 +1,6 @@
 import loader from './loader.mjs'; 
 
+
 export function getCart() {
   return JSON.parse(localStorage.getItem('cart')) || []; // Get basket from localStorage
 }

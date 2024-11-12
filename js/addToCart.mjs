@@ -1,12 +1,9 @@
-import loader from './loader.mjs'; // Import loader
-
 export function addToCart(product) {
-  loader.show(); 
 
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-  // Check if produckt is already in basket
+// Check if produckt is already in basket
   const existingProduct = cart.find(item => item.id === product.id);
+
   if (existingProduct) {
     existingProduct.quantity += 1; // Increase the quantity if the product exists
   } else {
@@ -15,6 +12,4 @@ export function addToCart(product) {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart)); // Update basket in localStorage
-
-  loader.hide(); 
 }
