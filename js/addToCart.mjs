@@ -1,7 +1,7 @@
 export function addToCart(product) {
 
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-// Check if produckt is already in basket
+// Check if product is already in basket
   const existingProduct = cart.find(item => item.id === product.id);
 
   if (existingProduct) {

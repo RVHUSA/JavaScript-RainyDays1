@@ -12,7 +12,7 @@ export function updateCartDisplay() {
   cartItemsContainer.innerHTML = '';  // Clear the cart in the user interface
   let totalPrice = 0;
 
-  // Show all produckts in cart
+  // Show all products in cart
   cart.forEach(item => {
     const itemElement = document.createElement('div');
     itemElement.classList.add('cart-item');
@@ -21,7 +21,7 @@ export function updateCartDisplay() {
       <button class="remove-item" data-id="${item.id}">Remove</button>
     `;
     cartItemsContainer.appendChild(itemElement);
-
+    
     totalPrice += item.price * item.quantity;  // Calculate total price
   });
 
