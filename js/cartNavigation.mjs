@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Find elements
-  const cartCountElement = document.getElementById('cart-count'); // ID for antall varer
-  const cartIconElement = document.querySelector('.cart-icon'); // Klasse for handlekurv-ikonet
+  const cartCountElement = document.getElementById('cart-count'); // ID for cart-count
+  const cartIconElement = document.querySelector('.cart-icon'); // Class for cart-icon
 
   if (cartCountElement) {
     updateCartCount(cartCountElement); // Update cart count
   }
 
   if (cartIconElement) {
-    // Legg til klikkhåndtering for handlekurv-ikonet
+    // Add click to cart icon 
     cartIconElement.addEventListener('click', () => {
-      window.location.href = "cartPage.html"; // Naviger til handlekurvsiden
+      window.location.href = "cartPage.html"; // Navigates to cart page
     });
   } 
 });
 
-// Funksjon for å oppdatere antall produkter i handlekurven
+// Function for updating cart count elements in cart 
 function updateCartCount(cartCountElement) {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0); // Beregn total antall produkter
-  cartCountElement.textContent = totalQuantity; // Oppdater antallet i handlekurv-ikonet
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0); // Total items quantity
+  cartCountElement.textContent = totalQuantity; // Update quantity number in cart
 }

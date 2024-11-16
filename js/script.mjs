@@ -38,7 +38,7 @@ async function main() {
     
   } catch (error) {
     console.error("Error fetching data:", error);
-    loader.hide(); // Hide loader on error
+    loader.hide(); 
   }
 }
 

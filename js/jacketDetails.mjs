@@ -15,7 +15,7 @@ if (!jacketId) {
 
 // Function to fetch jacket details from the API
 async function fetchJacketDetails(id) {
-  const API_SINGLE_JACKET = `https://api.noroff.dev/api/v1/rainy-days/${id}`; // Dynamically create API URL
+  const API_SINGLE_JACKET = `https://api.noroff.dev/api/v1/rainy-days/${id}`; 
 
   loader.show();
   try {
@@ -25,7 +25,7 @@ async function fetchJacketDetails(id) {
     const jacket = await response.json();
     displayJacketDetails(jacket);
 
-    // Once `jacket` is fetched, set up event listener for the add-to-cart button
+    // Once `jacket` is fetched, added event listener for the add-to-cart button
     const addToCartButton = document.getElementById('add-to-cart');
     if (addToCartButton) {
       addToCartButton.addEventListener('click', () => {

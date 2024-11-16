@@ -29,15 +29,16 @@ export function addToCart(product) {
 export function removeFromCart(productId) {
   const cart = getCart();
   const updatedCart = cart.filter(item => item.id !== productId); // Remove product
-  saveCart(updatedCart); // Save updated
+  saveCart(updatedCart); // Save cart updated
   updateCartDisplay(); 
 }
 
+// Update cart display
 export function updateCartDisplay() {
   const cart = getCart();
   const cartContainer = document.getElementById('cart-items');
   const totalPriceElement = document.getElementById('total-price');
-  const cartCountElement = document.getElementById('cart-count'); // Update cart count
+  const cartCountElement = document.getElementById('cart-count'); 
   
   cartContainer.innerHTML = ''; // Empty cart
 

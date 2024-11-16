@@ -23,7 +23,6 @@ main {
   text-transform: uppercase;       
 }
 
-/* Hover-effekt for knappene */
 #clear-cart:hover, #confirm-order:hover {
   background-color: #ebcc7f; 
 }
