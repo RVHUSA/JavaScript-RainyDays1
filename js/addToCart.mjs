@@ -1,7 +1,9 @@
-export function addToCart(product) {
+import { updateCartCount } from './cartDisplay.mjs';
 
+export function addToCart(product) {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
-// Check if product is already in basket
+  
+  // Check if product is in the cart 
   const existingProduct = cart.find(item => item.id === product.id);
 
   if (existingProduct) {
@@ -12,4 +14,6 @@ export function addToCart(product) {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart)); // Update basket in localStorage
+
+updateCartCount();
 }

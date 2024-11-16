@@ -53,11 +53,11 @@ export function updateCartDisplay() {
     `;
     cartContainer.appendChild(itemElement);
 
-    totalPrice += item.price * item.quantity; // Add price for produckt
-    totalQuantity += item.quantity; // Add quantity per produckt
+    totalPrice += item.price * item.quantity; // Add price for product
+    totalQuantity += item.quantity; // Add quantity per product
 
     itemElement.querySelector('.remove-item').addEventListener('click', () => {
-      removeFromCart(item.id); // Remove produckt
+      removeFromCart(item.id); // Remove product
     });
   });
 
