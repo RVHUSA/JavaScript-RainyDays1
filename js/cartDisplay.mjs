@@ -1,3 +1,4 @@
+
 export function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);  // Calculate number of items in cart

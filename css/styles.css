@@ -10,7 +10,7 @@ p {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 
@@ -41,7 +41,7 @@ nav a:hover {
 
 #menu-checkbox:checked ~ nav {
     display: grid;
-    grid-template-rows: 35px 35px 35px 35px;
+    grid-template-rows: 0px 35px 35px 35px 35px;
     padding-top: 5px;
 }
 
@@ -62,11 +62,12 @@ header {
     left: 0;
     padding-top: 8px;
     padding-bottom: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header img {
     max-width: 100px;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .material-symbols-outlined {
@@ -181,46 +182,60 @@ footer h2 {
 /* Styling Javascript Jackets List */
 #display-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 24px;
 }
 
 .container {
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    padding: 16px; 
-    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
     transition: box-shadow 0.3s ease;
-    background-color: #fff; 
+    min-height: 450px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.container:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container img {
+    width: 100%;
+    height: 200px;            
+    object-fit: contain;       
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background-color: #fff;
+}
+
+.container h3 {
+    font-size: 1.2em;
+    margin: 12px 0 8px 0;
+    color: #2b2b2b;
 }
 
 .container h3:hover {
     color: #FFB01F;
 }
 
-.container img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
-}
-
-.container h3 {
-    font-size: 1.5em; 
-    margin: 12px 0; 
-    color: #2b2b2b; 
-}
-
 .container p {
     font-size: 1em;
-    color: #5f5f5f; 
-    margin: 8px 0; 
+    color: #5f5f5f;
+    margin-bottom: 8px;
+    flex-grow: 1; 
 }
 
 .container div {
-    font-size: 1.2em; 
-    color: #007BFF; 
-    font-weight: bold; 
+    font-size: 1.1em;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 8px;
 }
-
 
 /* Loader-styling */
 .loader {
@@ -276,12 +291,20 @@ footer h2 {
 }
 
 
-
 /* Media*/
+@media (min-width: 300px){
+
+#cart-count {
+    top: 35px;
+    font-size: 8px;
+    padding: 2px 2px;
+}
+
+}
 
 @media (min-width: 600px){
 
-.footer-c {
+    .footer-c {
     grid-template-rows: 200px;
     grid-template-columns: 270px 200px;
     justify-content: center;
@@ -303,25 +326,26 @@ nav a {
 }
 
 #menu-checkbox:checked ~ nav {
-    grid-template-rows: 40px 40px 40px 40px;
+    grid-template-rows: 0px 35px 35px 35px 35px;
 }
-    
+
 }
 
 
 @media (min-width: 1024px) {
 
     header img {
-        max-width: 150px;
+        max-width: 100px;
     }
 
     .material-symbols-outlined {
-        font-size: 50px;
+        font-size: 42px;
     }
 
-    nav {
-        margin-top: 90px;
-    }
-
+    #menu-checkbox:checked ~ nav {
+        display: grid;
+        grid-template-rows: 0px 45px 45px 45px 45px;
+        padding-top: 5px;
 }
 
+}
