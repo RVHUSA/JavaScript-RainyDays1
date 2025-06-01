@@ -6,7 +6,7 @@ export function saveCart(cart) {
   localStorage.setItem('cart', JSON.stringify(cart)); // Save in localStorage
 }
 
-export function addToCart(product) {
+export function addToCart(clothing) {
 
   const cart = getCart();
   
@@ -19,7 +19,7 @@ export function addToCart(product) {
   } else {
     // If no, increase quantity
     product.quantity = 1;
-    cart.push(product);
+    cart.push(clothing);
   }
   
   saveCart(cart); // Save cart

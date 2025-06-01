@@ -155,6 +155,47 @@ select {
     display: none;
 }
 
+
+/* Container for filt buttons */
+.filt-buttons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;  
+    margin-top: 20px; 
+}
+
+
+.filt-buttons button {
+    background-color: #fdb943;  
+    color: #fff;  
+    border: none;  
+    padding: 10px 20px;  
+    font-size: 16px;  
+    cursor: pointer;  
+    border-radius: 15px;  
+    transition: transform 0.2s ease, box-shadow 0.3s ease;  
+}
+
+/* Hover effect */
+.filt-buttons button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+    background-color: #ebcc7f;
+}
+
+/* Make buttons responsive */
+@media (max-width: 768px) {
+.filt-buttons {
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.filt-buttons button {
+    width: 80%;  
+    font-size: 14px; 
+}
+}
+
+
 /* Media Jackets list */
 @media (min-width: 600px) {
     .content {

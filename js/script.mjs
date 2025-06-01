@@ -1,3 +1,4 @@
+// Import modules
 import { handleGenerate } from './handleGenerate.mjs';
 import { API_RD_URL } from './api.mjs';
 import { theFetch } from './theFetch.mjs';
@@ -12,6 +13,11 @@ function filterWomenJackets(items) {
   return items.filter(item => item.gender === "Female");
 }
 
+// Wait until the DOM is fully loaded before running main()
+document.addEventListener('DOMContentLoaded', function () {
+  main();
+});
+
 async function main() {
   loader.show(); // Show loader before fetching data
 
@@ -22,25 +28,38 @@ async function main() {
     handleGenerate(data); // Display products on the page
 
     // Filtering-buttons for gender
-    document.getElementById('show-men-jackets').addEventListener('click', function() {
-      const filteredMenJackets = filterMenJackets(data);
-      handleGenerate(filteredMenJackets); // Display men's jackets
-    });
+    const showMenButton = document.getElementById('show-men-jackets');
+    const showWomenButton = document.getElementById('show-women-jackets');
+    const showAllButton = document.getElementById('show-all-jackets');
 
-    document.getElementById('show-women-jackets').addEventListener('click', function() {
-      const filteredWomenJackets = filterWomenJackets(data);
-      handleGenerate(filteredWomenJackets); // Display women's jackets
-    });
+    if (showMenButton) {
+      showMenButton.addEventListener('click', function() {
+        const filteredMenJackets = filterMenJackets(data);
+        handleGenerate(filteredMenJackets); // Display men's jackets
+      });
+    } else {
+      console.error('Button with id "show-men-jackets" not found!');
+    }
 
-    document.getElementById('show-all-jackets').addEventListener('click', function() {
-      handleGenerate(data); // Display all jackets
-    });
+    if (showWomenButton) {
+      showWomenButton.addEventListener('click', function() {
+        const filteredWomenJackets = filterWomenJackets(data);
+        handleGenerate(filteredWomenJackets); // Display women's jackets
+      });
+    } else {
+      console.error('Button with id "show-women-jackets" not found!');
+    }
+
+    if (showAllButton) {
+      showAllButton.addEventListener('click', function() {
+        handleGenerate(data); // Display all jackets
+      });
+    } else {
+      console.error('Button with id "show-all-jackets" not found!');
+    }
     
   } catch (error) {
     console.error("Error fetching data:", error);
     loader.hide(); 
   }
 }
-
-// Run the function
-main();
