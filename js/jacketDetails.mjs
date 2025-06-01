@@ -32,7 +32,8 @@ async function fetchJacketDetails(id) {
         const product = {
           id: jacket.id,
           title: jacket.title,
-          price: jacket.price
+          price: jacket.price,
+          image: jacket.image 
         };
         addToCart(product); // Add the product to the cart
       });
@@ -49,12 +50,18 @@ async function fetchJacketDetails(id) {
 function displayJacketDetails(jacket) {
   const detailsDiv = document.getElementById('jacket-details');
   detailsDiv.innerHTML = `
-    <h1>${jacket.title}</h1>
-    <img src="${jacket.image}" alt="${jacket.title}">
-    <p>${jacket.description}</p>
-    <div>Price: $${jacket.price}</div>
-    <div>Color: ${jacket.baseColor}</div>
-    <div>Sizes: ${jacket.sizes.join(', ')}</div>
-    <button id="add-to-cart">Add to Cart</button>
+    <div class="jacket-wrapper">
+      <img src="${jacket.image}" alt="${jacket.title}">
+      <div class="jacket-info">
+        <h1>${jacket.title}</h1>
+        <p>${jacket.description}</p>
+        <div>Price: $${jacket.price}</div>
+        <div>Color:${jacket.baseColor}</div>
+        <div>Sizes: ${jacket.sizes.join(', ')}</div>
+        <button id="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
   `;
 }
+
+

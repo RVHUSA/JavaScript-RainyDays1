@@ -1,52 +1,76 @@
-main {
-  margin-top: 100px;
-  margin-left: 20px;
-  margin-bottom: 100px;
+.jacket-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto; 
+  box-sizing: border-box;
 }
 
-h1 {
-  text-transform: uppercase;
-}
-
-
-/* Styling jacket-details site */
-
-#jacket-details {
-  display: table;         
-  align-items: center; 
-  justify-content: space-between; 
-  gap: 20px;  
-}           
-
-#jacket-details img {
-  max-width: 40%;     
-  height: auto;          
+.jacket-wrapper img {
+  width: 100%;
+  max-width: 320px; 
+  height: auto;
   border-radius: 10px;
 }
 
-#jacket-details h1 {
-  margin-bottom: 16px;
+.jacket-info {
+  max-width: 500px;
+  text-align: left;
+  padding: 10px;
 }
 
-#jacket-details p {
+.jacket-info h1 {
   margin-bottom: 12px;
+  font-size: 1.6rem;
 }
 
-/* Styling for Add to Cart button */
+.jacket-info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.jacket-info div {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
 #add-to-cart {
   background-color: #FFB01F;
   color: #fff;
-  font-size: 1.2em;
-  padding: 12px 20px;
+  font-size: 1em;
+  padding: 10px 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width: 200px;
-  margin-top: 20px;
+  width: fit-content;
+  margin-top: 16px;
+  transition: background-color 0.2s ease;
 }
 
 #add-to-cart:hover {
   background-color: #FF8F1F;
 }
 
+/* Media */
+@media (min-width: 768px) {
+  .jacket-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 100px;
+  }
+
+  .jacket-wrapper img {
+    max-width: 300px;
+  }
+
+  .jacket-info {
+    padding-left: 10px;
+  }
+}
 
