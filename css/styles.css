@@ -195,7 +195,7 @@ footer h2 {
     padding: 16px;
     background-color: #fff;
     transition: box-shadow 0.3s ease;
-    min-height: 450px;
+    min-height: 500px;
     max-width: 100%;
     box-sizing: border-box;
 }
