@@ -1,0 +1,71 @@
+input, select, textarea {
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    margin: 10px 10px 10px 0px;
+    padding: 15px;
+}
+
+.contact-text {
+    margin: 100px 0 10px 10px;
+}
+
+.contact-text h1, 
+.contact-text h2 {
+    margin: 20px 0px 2px;
+    font-weight: bolder
+}
+
+.contact-text h1 {
+    text-transform: uppercase;
+}
+
+.contact-form h2,
+.contact-text h1 {
+    padding: 30px 0px 0px 0px;
+}
+
+.contact-text h2,
+.contact-form h2 {
+    font-size: 1.1rem;
+}
+
+.contact-text p {
+    margin: 5px 0px 5px;
+}
+
+.mail {
+    text-decoration: underline;
+}
+
+.contact {
+    max-width: 250px;
+    margin-left: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 60px 10px;
+}
+
+.cta-black {
+    padding: 15px 31px; 
+}
+
+textarea {
+    padding: 15px 15px 120px 15px;
+}
+
+/* Media*/
+
+@media (min-width: 800px){
+    .contact {
+        max-width: 700px;
+    }
+
+    .cta-black {
+        padding: 15px 318px;
+    }
+
+}
+
