@@ -15,7 +15,7 @@ Key features include:
 - 🔍 **Filtering** – Filter jackets by gender.
 - 🛒 **Shopping Cart** – Add items to the cart, view total price, remove products, and proceed to checkout.
 - ✅ **Checkout Flow** – Simulated checkout success page confirms completed orders.
-- 📱 **Responsive Design** – Works on mobile, tablet, and desktop with a grid-based layout.
+- 📱 **Responsive Design** – Works on mobile, tablet, and desktop.
 
 ## Built With
 
