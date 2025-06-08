@@ -30,7 +30,7 @@ Key features include:
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:RVHUSA/JavaScript-RainyDays1.git
+git clone https://github.com/RVHUSA/JavaScript-RainyDays1.git
 ```
 
 2. Install the dependencies:
