@@ -50,6 +50,7 @@
   width: fit-content;
   margin-top: 16px;
   transition: background-color 0.2s ease;
+  text-transform: uppercase;
 }
 
 #add-to-cart:hover {

@@ -237,6 +237,29 @@ footer h2 {
     margin-top: 8px;
 }
 
+/* Container for filt buttons */
+.filt-buttons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;  
+    margin-top: 20px; 
+}
+
+.filt-buttons button {
+    background-color: #fdb943;  
+    color: #fff;  
+    border: none;  
+    padding: 10px 20px;  
+    font-size: 16px;  
+    cursor: pointer;  
+    border-radius: 15px;  
+    transition: transform 0.2s ease, box-shadow 0.3s ease;  
+}
+
+#fb {
+    display: block;
+}
+
 /* Loader-styling */
 .loader {
     display: none; 
@@ -292,6 +315,24 @@ footer h2 {
 
 
 /* Media*/
+
+
+/* Make buttons responsive */
+@media (max-width: 768px) {
+    .filt-buttons {
+        flex-direction: column; 
+        gap: 10px;
+        padding: 20px;
+        align-items: center;
+    }
+    
+    .filt-buttons button {
+        width: 80%;  
+        font-size: 14px; 
+    }
+    }
+    
+
 @media (min-width: 300px){
 
 #cart-count {
@@ -324,11 +365,6 @@ nav a {
     margin: 15px;
     font-size: 1.3rem;
 }
-
-#menu-checkbox:checked ~ nav {
-    grid-template-rows: 0px 35px 35px 35px 35px;
-}
-
 }
 
 
@@ -344,7 +380,6 @@ nav a {
 
     #menu-checkbox:checked ~ nav {
         display: grid;
-        grid-template-rows: 0px 45px 45px 45px 45px;
         padding-top: 5px;
 }
 
