@@ -1,5 +1,6 @@
 # RAINY DAYS - Cross Course Project 
 
+
 ![image](https://rvhusa.github.io/Portfolio1-CA/images/RDlogo.png)
 
 An online store for outdoor jackets, designed with usability, product filtering, and shopping cart functionality.
