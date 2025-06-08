@@ -1,6 +1,6 @@
 # Your project title
 
-![image]([https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png](https://rvhusa.github.io/Portfolio1-CA/images/RDlogo.png)
+![image](https://rvhusa.github.io/Portfolio1-CA/images/RDlogo.png)
 
 An online store for outdoor jackets, designed with usability, product filtering, and shopping cart functionality.
 
